@@ -10,12 +10,12 @@ public:
     std::string name;
     std::vector<Subject> subjects;
 
-    // Pass string by const reference to save memory overhead
-    Student(const std::string& studentName);
-
-    void addSubject(const std::string& subjectName, int credit, float gradepoint);
+    Student(std::string studentName);
+    
+    void addSubject(std::string subjectName, int credit, float gradepoint);
     float calculatecgpa();
     void displaycgpa();
+    void saveRecordToFile(); // New file-saving method
 };
 
 #endif
